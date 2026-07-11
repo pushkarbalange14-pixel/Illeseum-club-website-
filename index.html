@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ILLESEUM - Ultra-premium sports, fitness, and wellness club combining luxury fitness with world-class facilities and community.">
+    <meta name="theme-color" content="#f5f1eb">
+    <title>ILLESEUM | Ultra-Premium Sports & Wellness Club</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" aria-label="ILLESEUM Home">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Logo Mark: Geometric luxury symbol -->
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#8B9977;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#3D4E37;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Outer hexagon -->
+                    <path d="M20 2L34.64 10V30L20 38L5.36 30V10Z" fill="url(#logoGrad)" opacity="0.9"/>
+                    <!-- Inner circle with negative space -->
+                    <circle cx="20" cy="20" r="8" fill="#f5f1eb"/>
+                    <!-- Accent lines -->
+                    <line x1="20" y1="12" x2="20" y2="28" stroke="#8B9977" stroke-width="1.5" opacity="0.6"/>
+                    <line x1="12" y1="20" x2="28" y2="20" stroke="#8B9977" stroke-width="1.5" opacity="0.6"/>
+                </svg>
+            </a>
+            
+            <ul class="nav-menu" aria-label="Navigation menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#facilities" class="nav-link">Facilities</a></li>
+                <li><a href="#membership" class="nav-link">Membership</a></li>
+                <li><a href="#classes" class="nav-link">Classes</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <button class="nav-cta" aria-label="Join ILLESEUM">Join Now</button>
+            
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero" role="region" aria-label="Hero section">
+        <div class="hero-background">
+            <canvas id="particleCanvas" aria-hidden="true"></canvas>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="split-text">Where Fitness Meets</span>
+                <span class="split-text luxury">Luxury</span>
+            </h1>
+            <p class="hero-subtitle">Discover an ultra-premium destination for sports, fitness, wellness, and community unlike anywhere else.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" aria-label="Start your journey with ILLESEUM">Start Your Journey</button>
+                <button class="btn btn-secondary" aria-label="Schedule a tour of our facilities">Schedule Tour</button>
+            </div>
+        </div>
+        <div class="hero-scroll" aria-hidden="true">
+            <p>Scroll to explore</p>
+            <i class="fas fa-arrow-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about" role="region" aria-label="About ILLESEUM">
+        <div class="container">
+            <div class="about-header">
+                <h2>The ILLESEUM Difference</h2>
+                <p>We've reimagined the fitness experience as a holistic wellness ecosystem.</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card" tabindex="0">
+                    <div class="card-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>World-Class Facilities</h3>
+                    <p>State-of-the-art equipment, multiple sports courts, and specialized training zones designed for peak performance.</p>
+                </div>
+                
+                <div class="about-card" tabindex="0">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Expert Community</h3>
+                    <p>Train alongside elite athletes and passionate fitness enthusiasts in an exclusive, supportive environment.</p>
+                </div>
+                
+                <div class="about-card" tabindex="0">
+                    <div class="card-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Holistic Wellness</h3>
+                    <p>From recovery lounges to nutrition coaching, we support your complete wellness journey beyond the gym.</p>
+                </div>
+                
+                <div class="about-card" tabindex="0">
+                    <div class="card-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Luxury Experience</h3>
+                    <p>Premium amenities, personalized service, and architectural sophistication at every touchpoint.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="facilities" role="region" aria-label="Our facilities">
+        <div class="container">
+            <h2 class="section-title">Premium Facilities</h2>
+            <p class="section-subtitle">Everything you need for complete fitness and wellness excellence.</p>
+            
+            <div class="facilities-grid">
+                <!-- Fitness Zone -->
+                <div class="facility-card">
+                    <div class="facility-header">
+                        <i class="fas fa-dumbbell"></i>
+                        <h3>Fitness Zone</h3>
+                    </div>
+                    <ul class="facility-list" role="list">
+                        <li role="listitem">Luxury Gym</li>
+                        <li role="listitem">Strength Zone</li>
+                        <li role="listitem">Cardio Suite</li>
+                        <li role="listitem">CrossFit Area</li>
+                        <li role="listitem">Functional Training</li>
+                    </ul>
+                </div>
+
+                <!-- Sports Courts -->
+                <div class="facility-card">
+                    <div class="facility-header">
+                        <i class="fas fa-basketball"></i>
+                        <h3>Sports Courts</h3>
+                    </div>
+                    <ul class="facility-list" role="list">
+                        <li role="listitem">Football Turf</li>
+                        <li role="listitem">Cricket Turf</li>
+                        <li role="listitem">Basketball Court</li>
+                        <li role="listitem">Badminton Court</li>
+                        <li role="listitem">Table Tennis</li>
+                    </ul>
+                </div>
+
+                <!-- Wellness & Recovery -->
+                <div class="facility-card">
+                    <div class="facility-header">
+                        <i class="fas fa-spa"></i>
+                        <h3>Recovery & Wellness</h3>
+                    </div>
+                    <ul class="facility-list" role="list">
+                        <li role="listitem">Recovery Lounge</li>
+                        <li role="listitem">Spa & Sauna</li>
+                        <li role="listitem">Steam Room</li>
+                        <li role="listitem">Physiotherapy</li>
+                        <li role="listitem">Nutrition Center</li>
+                    </ul>
+                </div>
+
+                <!-- Classes & Activities -->
+                <div class="facility-card">
+                    <div class="facility-header">
+                        <i class="fas fa-music"></i>
+                        <h3>Classes & Activities</h3>
+                    </div>
+                    <ul class="facility-list" role="list">
+                        <li role="listitem">Dance Studio</li>
+                        <li role="listitem">Yoga Studio</li>
+                        <li role="listitem">Zumba Classes</li>
+                        <li role="listitem">Swimming Pool</li>
+                        <li role="listitem">Personal Training</li>
+                    </ul>
+                </div>
+
+                <!-- Amenities -->
+                <div class="facility-card">
+                    <div class="facility-header">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Amenities</h3>
+                    </div>
+                    <ul class="facility-list" role="list">
+                        <li role="listitem">Protein Café</li>
+                        <li role="listitem">Premium Locker Rooms</li>
+                        <li role="listitem">Kids Zone</li>
+                        <li role="listitem">Sports Shop</li>
+                        <li role="listitem">Parking</li>
+                    </ul>
+                </div>
+
+                <!-- Community -->
+                <div class="facility-card">
+                    <div class="facility-header">
+                        <i class="fas fa-heart"></i>
+                        <h3>Community</h3>
+                    </div>
+                    <ul class="facility-list" role="list">
+                        <li role="listitem">Member Events</li>
+                        <li role="listitem">Social Lounges</li>
+                        <li role="listitem">Wellness Workshops</li>
+                        <li role="listitem">Exclusive Access</li>
+                        <li role="listitem">Networking Hub</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section id="membership" class="membership" role="region" aria-label="Membership plans">
+        <div class="container">
+            <h2 class="section-title">Membership Plans</h2>
+            <p class="section-subtitle">Choose the perfect plan for your fitness journey.</p>
+            
+            <div id="membership-container"></div>
+        </section>
+
+    <!-- Classes Section -->
+    <section id="classes" class="classes" role="region" aria-label="Classes">
+        <div class="container">
+            <h2 class="section-title">Expert-Led Classes</h2>
+            <p class="section-subtitle">World-class instruction from elite fitness professionals.</p>
+            
+            <div class="classes-grid">
+                <div class="class-card" tabindex="0">
+                    <div class="class-icon"><i class="fas fa-weight-hanging"></i></div>
+                    <h3>Strength Training</h3>
+                    <p>Build muscle and power with personalized strength programs.</p>
+                    <span class="class-badge">5x Weekly</span>
+                </div>
+                
+                <div class="class-card" tabindex="0">
+                    <div class="class-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Cardio Intensive</h3>
+                    <p>High-energy sessions to boost endurance and cardiovascular health.</p>
+                    <span class="class-badge">Daily</span>
+                </div>
+                
+                <div class="class-card" tabindex="0">
+                    <div class="class-icon"><i class="fas fa-spa"></i></div>
+                    <h3>Yoga & Mindfulness</h3>
+                    <p>Find balance, flexibility, and mental clarity through guided practice.</p>
+                    <span class="class-badge">6x Weekly</span>
+                </div>
+                
+                <div class="class-card" tabindex="0">
+                    <div class="class-icon"><i class="fas fa-music"></i></div>
+                    <h3>Dance Fusion</h3>
+                    <p>Express yourself through rhythmic, high-energy dance cardio.</p>
+                    <span class="class-badge">4x Weekly</span>
+                </div>
+                
+                <div class="class-card" tabindex="0">
+                    <div class="class-icon"><i class="fas fa-fire"></i></div>
+                    <h3>HIIT & CrossFit</h3>
+                    <p>Intense interval training for maximum efficiency and results.</p>
+                    <span class="class-badge">Daily</span>
+                </div>
+                
+                <div class="class-card" tabindex="0">
+                    <div class="class-icon"><i class="fas fa-swimmer"></i></div>
+                    <h3>Swimming Program</h3>
+                    <p>From technique to endurance – aquatic fitness for all levels.</p>
+                    <span class="class-badge">Daily</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery" role="region" aria-label="Gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <p class="section-subtitle">Experience the architectural and aesthetic excellence of ILLESEUM.</p>
+            
+            <div class="gallery-grid" role="region" aria-label="Image gallery">
+                <!-- Image 1: Main fitness floor with equipment -->
+                <div class="gallery-item large">
+                    <div class="gallery-placeholder"></div>
+                </div>
+                
+                <!-- Image 2: Swimming pool area -->
+                <div class="gallery-item">
+                    <div class="gallery-placeholder"></div>
+                </div>
+                
+                <!-- Image 3: Yoga studio with natural light -->
+                <div class="gallery-item">
+                    <div class="gallery-placeholder"></div>
+                </div>
+                
+                <!-- Image 4: Recovery lounge seating -->
+                <div class="gallery-item">
+                    <div class="gallery-placeholder"></div>
+                </div>
+                
+                <!-- Image 5: Sports courts overview -->
+                <div class="gallery-item large">
+                    <div class="gallery-placeholder"></div>
+                </div>
+                
+                <!-- Image 6: Spa and sauna entrance -->
+                <div class="gallery-item">
+                    <div class="gallery-placeholder"></div>
+                </div>
+                
+                <!-- Image 7: Protein cafe interior -->
+                <div class="gallery-item">
+                    <div class="gallery-placeholder"></div>
+                </div>
+                
+                <!-- Image 8: Locker room facilities -->
+                <div class="gallery-item">
+                    <div class="gallery-placeholder"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials" role="region" aria-label="Member testimonials">
+        <div class="container">
+            <h2 class="section-title">Member Stories</h2>
+            <p class="section-subtitle">Hear from members who've transformed their lives at ILLESEUM.</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card" tabindex="0">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <span>SA</span>
+                        </div>
+                        <div>
+                            <h4>Sarah Ahmed</h4>
+                            <p class="testimonial-role">Gold Member</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"ILLESEUM has transformed not just my fitness, but my entire approach to wellness. The community here is unmatched."</p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" tabindex="0">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <span>MK</span>
+                        </div>
+                        <div>
+                            <h4>Marcus Kim</h4>
+                            <p class="testimonial-role">Platinum Member</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"The facilities are world-class, but what truly sets ILLESEUM apart is the expertise and care from every single trainer."</p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" tabindex="0">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <span>ER</span>
+                        </div>
+                        <div>
+                            <h4>Elena Rodriguez</h4>
+                            <p class="testimonial-role">Diamond Member</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"The recovery services and nutrition coaching have been game-changing. ILLESEUM truly understands holistic wellness."</p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="statistics" class="statistics" role="region" aria-label="ILLESEUM statistics">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card" tabindex="0">
+                    <h3 class="stat-number" data-target="5000">0</h3>
+                    <p class="stat-label">Active Members</p>
+                </div>
+                <div class="stat-card" tabindex="0">
+                    <h3 class="stat-number" data-target="50">0</h3>
+                    <p class="stat-label">Expert Trainers</p>
+                </div>
+                <div class="stat-card" tabindex="0">
+                    <h3 class="stat-number" data-target="25">0</h3>
+                    <p class="stat-label">Sports & Classes</p>
+                </div>
+                <div class="stat-card" tabindex="0">
+                    <h3 class="stat-number" data-target="98">0</h3>
+                    <p class="stat-label">Member Satisfaction %</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq" role="region" aria-label="Frequently asked questions">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item" tabindex="0">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+                        <span>What's included in each membership tier?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="faq-1" class="faq-answer" hidden>
+                        <p>Silver includes gym access and basic classes. Gold adds personal training sessions. Platinum includes recovery services and nutrition coaching. Diamond provides full access to all facilities and concierge service.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" tabindex="0">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+                        <span>Are there guest passes available?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="faq-2" class="faq-answer" hidden>
+                        <p>Yes! Gold and above members receive complimentary guest passes each month. Contact our membership team for details on guest privileges.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" tabindex="0">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+                        <span>Do you offer fitness assessments?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="faq-3" class="faq-answer" hidden>
+                        <p>Absolutely. All new members receive a complimentary comprehensive fitness assessment and personalized program recommendation.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" tabindex="0">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+                        <span>What are the operating hours?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="faq-4" class="faq-answer" hidden>
+                        <p>We're open from 5 AM to 11 PM daily. Premium members enjoy exclusive early access starting at 4:30 AM.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" tabindex="0">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+                        <span>Can I freeze my membership?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="faq-5" class="faq-answer" hidden>
+                        <p>Yes, we offer membership pause options for up to 3 months per year. Contact our support team to arrange this.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" tabindex="0">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
+                        <span>Is childcare available?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="faq-6" class="faq-answer" hidden>
+                        <p>Yes, we have a dedicated Kids Zone with supervised activities. Diamond members enjoy complimentary childcare services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact" role="region" aria-label="Contact us">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Ready to elevate your fitness journey? Connect with our team.</p>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>123 Wellness Boulevard<br>Solapur, Maharashtra 413001</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:hello@illeseum.com">hello@illeseum.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Mon - Fri: 5 AM - 11 PM<br>Sat - Sun: 6 AM - 10 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm" novalidate>
+                    <input type="text" placeholder="Your Name" required aria-label="Your name">
+                    <input type="email" placeholder="Your Email" required aria-label="Your email">
+                    <input type="tel" placeholder="Phone Number" aria-label="Your phone number">
+                    <textarea placeholder="Your Message" rows="5" required aria-label="Your message"></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>ILLESEUM</h4>
+                    <p>Redefining the future of fitness and wellness with luxury, excellence, and community.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul role="list">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#facilities">Facilities</a></li>
+                        <li><a href="#membership">Membership</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul role="list">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Membership Agreement</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Subscribe</h4>
+                    <p>Get exclusive updates and wellness tips.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+                        <button type="submit" aria-label="Subscribe to newsletter"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ILLESEUM. All rights reserved. Crafted with precision and luxury.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.0.42/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/split-type/0.3.3/split-type.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script src="script.js" defer></script>
+</body>
+</html>
